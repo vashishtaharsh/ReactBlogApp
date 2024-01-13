@@ -7,7 +7,7 @@ function AllPosts() {
     const [posts, setPosts] = useState([])
 
     const result = async () => {
-        const data = await appwriteService.getPosts()
+        const data = await appwriteService.getPosts([])
         setPosts(data.documents)
     }
     useEffect(() => {
@@ -22,7 +22,7 @@ function AllPosts() {
                         {
                             posts?.map((post) => (
 
-                                <div className='p-2 w-1/4' key={post.$id}>
+                                <div className='p-2 w-1/4 h-20' key={post.$id}>
                                     <PostCard {...post} />
                                 </div>
 
