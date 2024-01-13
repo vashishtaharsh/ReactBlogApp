@@ -5,13 +5,11 @@ import { Container, PostCard } from '../index'
 function Home() {
 
     const [posts, setPosts] = useState([])
-    const [loading, setLoading] = useState(false)
+    const [loading, setLoading] = useState(true)
 
     const result = async () => {
-        setLoading(true)
         const data = await appwriteService.getPosts([])
         setPosts(data.documents)
-        setLoading(false)
         // console.log(data.documents);
     }
     useEffect(() => {

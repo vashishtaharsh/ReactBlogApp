@@ -22,7 +22,7 @@ function AllPosts() {
                         {
                             posts?.map((post) => (
 
-                                <div className='p-2 w-1/4 h-20' key={post.$id}>
+                                <div className='p-2 w-1/4' key={post.$id}>
                                     <PostCard {...post} />
                                 </div>
 
